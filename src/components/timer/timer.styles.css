@@ -1,0 +1,87 @@
+.timerbox {
+  margin: auto;
+  margin-top: 23vh;
+  border: 2px solid #636670;
+  border-radius: 30px;
+  width: 80%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FFDAE1;
+  font-family: 'Mukta', sans-serif;
+  color: #636670;
+}
+
+.timerbox-tittle {
+  margin-top: 0.5em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.timerbox-timer {
+  margin-top: 1em;
+  border: 2px solid #636670;
+  border-radius: 30px;
+  padding: 0.8em;
+  width: 90%;
+  background-color: #DEFCFC;
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Play', sans-serif;
+}
+
+.timerbox-timer,
+span {
+  font-size: 1.4em;
+}
+
+.timerbox-buttons {
+  margin: 1.2em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.timerbox-button {
+  border: 2px solid #636670;
+  border-radius: 10px;
+  padding: 0.25em;
+  height: 1.8em;
+  width: 45%;
+  background-color: #DEFCFC;
+  font-size: 1.2em;
+  color: #636670;
+}
+
+.timerbox-button:hover {
+  border: 2px solid #636670;
+  background-color: #636670;
+  color: #DEFCFC;
+}
+
+@media screen and (min-width: 576px) {
+  .timerbox {
+    width: 70%;
+    max-width: 480px;
+  }
+
+  .timerbox-tittle {
+    font-size: 2.5em;
+    margin-top: 1em;
+  }
+
+  .timerbox-timer {
+    font-size: 2em;
+  }
+
+  .timerbox-buttons {
+    margin: 1.5em 0;
+  }
+
+  .timerbox-button {
+    font-size: 1.5em;
+  }
+}

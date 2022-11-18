@@ -1,5 +1,7 @@
 import { Component } from "react";
 
+import './timer.styles.css';
+
 class Timer extends Component {
   constructor() {
     super();
@@ -94,7 +96,7 @@ class Timer extends Component {
   }
 
   resetTimer = () => {
-    const shouldReset = window.confirm("Do you really want to reset the timer?")
+    const shouldReset = window.confirm("Do you really want to reset the timer? All today's data is going to be lost")
 
     if (shouldReset) {
       this.setInitialState()
@@ -141,15 +143,18 @@ class Timer extends Component {
     let button
 
     if (this.state.intervalID === null)
-      button = <button onClick={this.startTimer}>Start</button>
+      button = <button className="timerbox-button" onClick={this.startTimer}>Start</button>
     else
-      button = <button onClick={this.stopTimer}>Stop</button>
+      button = <button className="timerbox-button" onClick={this.stopTimer}>Stop</button>
 
     return (
-      <div>
-        <h1>{this.state.hours}:{this.state.minutes}:{this.state.secconds} {this.state.milliseconds}</h1>
-        {button}
-        <button onClick={this.resetTimer}>Reset</button>
+      <div className="timerbox">
+        <h2 className="timerbox-tittle">Timer</h2>
+        <p className="timerbox-timer"><span>{this.state.hours}:{this.state.minutes}:{this.state.secconds}</span> {this.state.milliseconds}</p>
+        <div className="timerbox-buttons">
+          {button}
+          <button className="timerbox-button" onClick={this.resetTimer}>Reset</button>
+        </div>
       </div>
     )
   }
