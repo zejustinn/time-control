@@ -67,7 +67,7 @@ class Timer extends Component {
       milliseconds: String(timer % 100).padStart(2, '0'),
       secconds: String(Math.floor(timer / 100) % 60).padStart(2, '0'),
       minutes: String(Math.floor(timer / 6000) % 60).padStart(2, '0'),
-      hours: String(Math.floor(timer / 36000)).padStart(2, '0'),
+      hours: String(Math.floor(timer / 360000)).padStart(2, '0'),
     })
   }
 
@@ -86,7 +86,7 @@ class Timer extends Component {
         const startDate = this.state.startDate
         const endDate = this.state.endDate
         const history = this.state.history
-        history.push({ startDate: startDate, endDate: endDate })
+        history.push({ startDate, endDate })
 
         this.setState({ history }, () => {
           this.upsertLocalStorageTimerData()
